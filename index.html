@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DZfacemaker | Premium PES 17 Faces Database</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="DZfacemaker | Premium PES 17 Faces Database">
+    <meta property="og:description" content="Download high-quality professional face packs for pes 2017. All major leagues included!">
+    <meta property="og:image" content="images/preview.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="images/preview.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>DZ<span>facemaker</span></h1>
+            </div>
+            <div class="search-wrapper">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search for player faces (e.g., Belaili, Gavi)...">
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="sidebar-title">
+                <i class="fas fa-trophy"></i>
+                <h2>Leagues</h2>
+            </div>
+            <ul id="leagues-list">
+                </ul>
+            
+            <div class="social-links">
+                <p>Follow me on</p>
+
+                <a href="https://www.youtube.com/@DZfacemaker" target="_blank" class="social-btn youtube">
+                    <i class="fab fa-youtube"></i> Youtube
+                </a>
+                <a href="https://www.facebook.com/profil.php?id=61577257435908" target="_blank" class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+            </div>    
+        </aside>
+
+        <main class="content-area">
+            <div class="content-header">
+                <h2 id="breadcrumb" class="section-title">Latest Premium Faces</h2>
+                <button id="back-to-home" class="home-btn" style="display: none;"><i class="fas fa-home"></i> Back to Feed</button>
+            </div>
+            
+            <div id="display-grid" class="faces-grid">
+                </div>
+
+            <div id="player-modal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-modal" id="close-modal-btn">&times;</span>
+                    <div class="modal-body">
+                        <div class="modal-img-container">
+                            <img id="player-img" src="" alt="Player Face Preview">
+                        </div>
+                        <div class="modal-info">
+                            <h2 id="player-name"></h2>
+                            <div class="player-meta">
+                                <span id="player-club-tag"><i class="fas fa-shield-halved"></i> <span></span></span>
+                            </div>
+                            <p id="player-info"></p>
+                            <a id="download-link" href="#" class="download-action-btn" target="_blank">
+                                <i class="fas fa-cloud-arrow-down"></i> Download Face Pack
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 <strong>DZfacemaker</strong>. All Rights Reserved. Designed for PES 17 Community.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
