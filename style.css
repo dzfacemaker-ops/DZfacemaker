@@ -424,3 +424,73 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(24, 119, 242, 0.3);
 }
+
+/* التنسيق الجديد والاحترافي لصندوق الطلبات */
+.request-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #1a1a1a; /* نفس خلفية الأزرار لي فوقها */
+    border: 1px solid rgba(0, 230, 118, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.request-box h3 {
+    color: #00e676;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.request-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* مسافة متناسقة بين الخانة والزر */
+}
+
+/* تنسيق خانة الكتابة */
+.request-form-container input {
+    width: 100%;
+    padding: 12px 15px;
+    background: #121212; /* خلفية غامقة متناسقة مع الموقع */
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #ffffff !important; /* الكتابة تخرج بيضاء واضحة */
+    font-size: 0.9rem;
+    outline: none;
+    box-sizing: border-box; /* تمنع الخروج عن الإطار */
+    transition: all 0.3s ease;
+}
+
+/* تأثير عند الضغط داخل خانة الكتابة */
+.request-form-container input:focus {
+    border-color: #00e676;
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.2);
+}
+
+/* تنسيق زر الإرسال */
+.request-form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #00e676;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 230, 118, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* تأثير حركي عند وضع الماوس فوق الزر */
+.request-form-container button:hover {
+    background: #00b359;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 230, 118, 0.2);
+}
+

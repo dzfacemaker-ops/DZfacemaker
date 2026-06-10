@@ -46,10 +46,143 @@
                 <a href="https://www.youtube.com/@DZfacemaker" target="_blank" class="social-btn youtube">
                     <i class="fab fa-youtube"></i> Youtube
                 </a>
-                <a href="https://www.facebook.com/profil.php?id=61577257435908" target="_blank" class="social-btn facebook">
+                <a href="https://www.facebook.com/61577257435908/" target="_blank" class="social-btn facebook">
                     <i class="fab fa-facebook-f"></i> Facebook
                 </a>
-            </div>    
+            </div>  
+           
+            <!-- قسم طلبات الوجوه المطور مع صندوق الرسائل والتشغيل الكامل -->
+<div class="request-box">
+    <h3 class="admin-trigger"><i class="fas fa-paper-plane"></i> Ask for a player's face</h3>
+    <div class="request-form-container">
+        <input type="text" id="player-input" placeholder="Write a player's name here..." autocomplete="off">
+        <button id="submit-request-btn">Submit the request</button>
+    </div>
+</div>
+
+<!-- صندوق رسائل الأدمن المخفي -->
+<div id="admin-inbox" style="display: none; margin-top: 20px; padding: 15px; background: #1a1a1a; border: 2px dashed #00e676; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+    <h3 style="color: #00e676; text-align: center; font-size: 1.05rem; margin-bottom: 12px; font-weight: 600;"><i class="fas fa-envelope-open-text"></i> Admin's Inbox 📬</h3>
+    <ul id="requests-list" style="list-style: none; padding: 0; margin-top: 10px; text-align: left;">
+        <!-- الرسائل تظهر هنا -->
+    </ul>
+    <button id="clear-requests-btn" style="background: #ff1744; color: white; width: 100%; border: none; padding: 10px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-weight: bold; font-size: 0.9rem; transition: background 0.3s;">Delete all messages</button>
+</div>
+
+<script>
+    // 1. دالة إرسال الطلب وحفظه
+    document.getElementById('submit-request-btn').addEventListener('click', () => {
+        const input = document.getElementById('player-input');
+        const playerName = input.value.trim();
+
+        if (playerName === "") {
+            alert("Please write a player's name first!");
+            return;
+        }
+
+        let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
+        savedRequests.push({
+            name: playerName,
+            date: new Date().toLocaleDateString('en-US')
+        });
+
+        localStorage.setItem('pes_requests', JSON.stringify(savedRequests));
+        alert("Your request has been sent successfully!");
+        input.value = "";
+        
+        updateAdminInboxUI();
+    });
+
+    // 2. دالة تحديث وعرض الرسائل في صندوق الأدمن
+    function updateAdminInboxUI() {
+        const list = document.getElementById('requests-list');
+        if(!list) return;
+        
+        list.innerHTML = "";
+        let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
+
+        if(savedRequests.length === 0) {
+            list.innerHTML = "<li style='color: #888; text-align: center; font-size: 0.85rem; padding: 10px;'>No new requests.</li>";
+            return;
+        }
+
+        savedRequests.forEach((req) => {
+            const li = document.createElement('li');
+            li.style.background = "#121212";
+            li.style.padding = "10px 12px";
+            li.style.marginBottom = "8px";
+            li.style.borderRadius = "6px";
+            li.style.borderLeft = "4px solid #00e676";
+            li.style.fontSize = "0.9rem";
+            li.style.color = "#fff";
+            li.style.display = "flex";
+            li.style.justifyContent = "space-between";
+            li.style.alignItems = "center";
+            li.innerHTML = `<strong>${req.name}</strong> <span style="font-size: 0.75rem; color: #888;">${req.date}</span>`;
+            list.appendChild(li);
+        });
+    }
+
+    // 3. دالة مسح الرسائل
+    document.getElementById('clear-requests-btn').addEventListener('click', () => {
+        if(confirm("Are you sure you want to delete all requests?")) {
+            localStorage.removeItem('pes_requests');
+            updateAdminInboxUI();
+        }
+    });
+
+    // 4. ميزة الـ 5 ضغطات السرية (ضرك رجعتها تضغط على عنوان الخانة نفسه "Ask for a player's face")
+    let secretClickCount = 0;
+    const trigger = document.querySelector('.admin-trigger');
+    if(trigger) {
+        trigger.style.cursor = "pointer";
+        trigger.addEventListener('click', () => {
+            secretClickCount++;
+            if(secretClickCount === 5) {
+                const inbox = document.getElementById('admin-inbox');
+                if(inbox) {
+                    inbox.style.display = inbox.style.display === 'none' ? 'block' : 'none';
+                    updateAdminInboxUI();
+                }
+                secretClickCount = 0;
+            }
+        });
+    }
+</script>
+
+
+<script>
+    // هاد الكود الصغير يضمن أن الزر يخدم حتى لو صرى مشكل في الملف الخارجي
+    document.getElementById('submit-request-btn').addEventListener('click', () => {
+        if (typeof sendPlayerRequest === 'function') {
+            sendPlayerRequest();
+        } else {
+            // إذا لم يجد الدالة في script.js، يطبقها هنا مباشرة
+            const input = document.getElementById('player-input');
+            const playerName = input.value.trim();
+
+            if (playerName === "") {
+                alert("Please write a player's name first!");
+                return;
+            }
+
+            let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
+            savedRequests.push({
+                name: playerName,
+                date: new Date().toLocaleDateString('ar-DZ')
+            });
+
+            localStorage.setItem('pes_requests', JSON.stringify(savedRequests));
+            alert("Your request has been sent successfully!");
+            input.value = "";
+            
+            if (typeof updateAdminInbox === 'function') {
+                updateAdminInbox();
+            }
+        }
+    });
+</script>
+
         </aside>
 
         <main class="content-area">
