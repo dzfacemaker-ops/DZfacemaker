@@ -51,7 +51,7 @@
                 </a>
             </div>  
            
-            <!-- قسم طلبات الوجوه المطور مع صندوق الرسائل والتشغيل الكامل -->
+   <!--  حط هذا الكود الجديد في البلاصة اللي مسحت منها الكود القديم -->
 <div class="request-box">
     <h3 class="admin-trigger"><i class="fas fa-paper-plane"></i> Ask for a player's face</h3>
     <div class="request-form-container">
@@ -60,18 +60,21 @@
     </div>
 </div>
 
-<!-- صندوق رسائل الأدمن المخفي -->
+<!-- صندوق رسائل الأدمن المخفي السحابي -->
 <div id="admin-inbox" style="display: none; margin-top: 20px; padding: 15px; background: #1a1a1a; border: 2px dashed #00e676; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
     <h3 style="color: #00e676; text-align: center; font-size: 1.05rem; margin-bottom: 12px; font-weight: 600;"><i class="fas fa-envelope-open-text"></i> Admin's Inbox 📬</h3>
     <ul id="requests-list" style="list-style: none; padding: 0; margin-top: 10px; text-align: left;">
-        <!-- الرسائل تظهر هنا -->
+        <!-- الرسائل القادمة من السيرفر تظهر هنا -->
     </ul>
     <button id="clear-requests-btn" style="background: #ff1744; color: white; width: 100%; border: none; padding: 10px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-weight: bold; font-size: 0.9rem; transition: background 0.3s;">Delete all messages</button>
 </div>
 
 <script>
-    // 1. دالة إرسال الطلب وحفظه
-    document.getElementById('submit-request-btn').addEventListener('click', () => {
+    // الرابط الصحيح والحروف صغيرة كامل كيما في شاشة كمبيوترك
+    const FIREBASE_URL = "https://dzfacemaker-requests-default-rtdb.firebaseio.com/requests.json";
+
+    // 1. دالة إرسال الطلب (Submit)
+    document.getElementById('submit-request-btn').addEventListener('click', function() {
         const input = document.getElementById('player-input');
         const playerName = input.value.trim();
 
@@ -80,75 +83,93 @@
             return;
         }
 
-        let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
-        savedRequests.push({
+        const requestData = {
             name: playerName,
             date: new Date().toLocaleDateString('en-US')
-        });
+        };
 
-        localStorage.setItem('pes_requests', JSON.stringify(savedRequests));
-        alert("Your request has been sent successfully!");
-        input.value = "";
-        
-        updateAdminInboxUI();
+        // إرسال البيانات بـ POST للسيرفر
+        fetch(FIREBASE_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(requestData)
+        })
+        .then(res => {
+            if (res.ok) {
+                alert("The request was successfully submitted! 🚀");
+                input.value = "";
+                updateAdminInboxUI(); // تحديث القائمة فوراً
+            } else {
+                alert("Server connection error.");
+            }
+        })
+        .catch(err => console.error("Error sending:", err));
     });
 
-    // 2. دالة تحديث وعرض الرسائل في صندوق الأدمن
+    // 2. دالة جلب وقراءة الطلبات وعرضها في صندوق الأدمن
     function updateAdminInboxUI() {
         const list = document.getElementById('requests-list');
-        if(!list) return;
+        if (!list) return;
         
         list.innerHTML = "";
-        let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
 
-        if(savedRequests.length === 0) {
-            list.innerHTML = "<li style='color: #888; text-align: center; font-size: 0.85rem; padding: 10px;'>No new requests.</li>";
-            return;
-        }
+        fetch(FIREBASE_URL)
+        .then(res => res.json())
+        .then(data => {
+            if (!data) {
+                list.innerHTML = "<li style='color: #888; text-align: center; padding: 10px;'>No new requests.</li>";
+                return;
+            }
 
-        savedRequests.forEach((req) => {
-            const li = document.createElement('li');
-            li.style.background = "#121212";
-            li.style.padding = "10px 12px";
-            li.style.marginBottom = "8px";
-            li.style.borderRadius = "6px";
-            li.style.borderLeft = "4px solid #00e676";
-            li.style.fontSize = "0.9rem";
-            li.style.color = "#fff";
-            li.style.display = "flex";
-            li.style.justifyContent = "space-between";
-            li.style.alignItems = "center";
-            li.innerHTML = `<strong>${req.name}</strong> <span style="font-size: 0.75rem; color: #888;">${req.date}</span>`;
-            list.appendChild(li);
-        });
+            // عرض البيانات لايف
+            Object.keys(data).forEach(key => {
+                const req = data[key];
+                const li = document.createElement('li');
+                li.style.background = "#121212";
+                li.style.padding = "10px 12px";
+                li.style.marginBottom = "8px";
+                li.style.borderRadius = "6px";
+                li.style.borderLeft = "4px solid #00e676";
+                li.style.color = "#fff";
+                li.style.display = "flex";
+                li.style.justifyContent = "space-between";
+                li.innerHTML = `<strong>${req.name}</strong> <span style="font-size: 0.75rem; color: #888;">${req.date}</span>`;
+                list.appendChild(li);
+            });
+        })
+        .catch(err => console.error("Error reading:", err));
     }
 
-    // 3. دالة مسح الرسائل
-    document.getElementById('clear-requests-btn').addEventListener('click', () => {
-        if(confirm("Are you sure you want to delete all requests?")) {
-            localStorage.removeItem('pes_requests');
-            updateAdminInboxUI();
+    // 3. دالة مسح كل الرسائل
+    document.getElementById('clear-requests-btn').addEventListener('click', function() {
+        if (confirm("Are you sure you've deleted all the orders?")) {
+            fetch(FIREBASE_URL, { method: "DELETE" })
+            .then(() => updateAdminInboxUI())
+            .catch(err => console.error("Error deleting:", err));
         }
     });
 
-    // 4. ميزة الـ 5 ضغطات السرية (ضرك رجعتها تضغط على عنوان الخانة نفسه "Ask for a player's face")
+    // 4. ميزة الـ 5 ضغطات السرية لفتح الصندوق
     let secretClickCount = 0;
     const trigger = document.querySelector('.admin-trigger');
-    if(trigger) {
-        trigger.style.cursor = "pointer";
-        trigger.addEventListener('click', () => {
+    if (trigger) {
+        trigger.addEventListener('click', function() {
             secretClickCount++;
-            if(secretClickCount === 5) {
+            if (secretClickCount === 5) {
                 const inbox = document.getElementById('admin-inbox');
-                if(inbox) {
+                if (inbox) {
                     inbox.style.display = inbox.style.display === 'none' ? 'block' : 'none';
-                    updateAdminInboxUI();
+                    updateAdminInboxUI(); // جلب الطلبات عند الفتح
                 }
                 secretClickCount = 0;
             }
         });
     }
 </script>
+
+
 
 
 <script>
