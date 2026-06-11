@@ -70,10 +70,9 @@
 </div>
 
 <script>
-    // الرابط الصحيح والحروف صغيرة كامل كيما في شاشة كمبيوترك
     const FIREBASE_URL = "https://dzfacemaker-requests-default-rtdb.firebaseio.com/requests.json";
 
-    // 1. دالة إرسال الطلب (Submit)
+    // 1. دالة إرسال الطلب (للمتابعين - شغالة دايماً عادي)
     document.getElementById('submit-request-btn').addEventListener('click', function() {
         const input = document.getElementById('player-input');
         const playerName = input.value.trim();
@@ -88,31 +87,26 @@
             date: new Date().toLocaleDateString('en-US')
         };
 
-        // إرسال البيانات بـ POST للسيرفر
         fetch(FIREBASE_URL, {
             method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(requestData)
         })
         .then(res => {
             if (res.ok) {
-                alert("The request was successfully submitted! 🚀");
+                alert("Your request has been sent successfully! 🚀");
                 input.value = "";
-                updateAdminInboxUI(); // تحديث القائمة فوراً
             } else {
-                alert("Server connection error.");
+                alert("Error sending request.");
             }
         })
-        .catch(err => console.error("Error sending:", err));
+        .catch(err => console.error("Error:", err));
     });
 
-    // 2. دالة جلب وقراءة الطلبات وعرضها في صندوق الأدمن
+    // 2. دالة جلب وقراءة الطلبات (تطلب منك الكود السري)
     function updateAdminInboxUI() {
         const list = document.getElementById('requests-list');
         if (!list) return;
-        
         list.innerHTML = "";
 
         fetch(FIREBASE_URL)
@@ -123,7 +117,6 @@
                 return;
             }
 
-            // عرض البيانات لايف
             Object.keys(data).forEach(key => {
                 const req = data[key];
                 const li = document.createElement('li');
@@ -135,6 +128,7 @@
                 li.style.color = "#fff";
                 li.style.display = "flex";
                 li.style.justifyContent = "space-between";
+                li.style.alignItems = "center";
                 li.innerHTML = `<strong>${req.name}</strong> <span style="font-size: 0.75rem; color: #888;">${req.date}</span>`;
                 list.appendChild(li);
             });
@@ -142,32 +136,47 @@
         .catch(err => console.error("Error reading:", err));
     }
 
-    // 3. دالة مسح كل الرسائل
+    // 3. دالة مسح كل الرسائل (محمية بطلب كلمة سر تخرجلك في الشاشة)
     document.getElementById('clear-requests-btn').addEventListener('click', function() {
-        if (confirm("Are you sure you've deleted all the orders?")) {
-            fetch(FIREBASE_URL, { method: "DELETE" })
-            .then(() => updateAdminInboxUI())
-            .catch(err => console.error("Error deleting:", err));
+        // يخرجلك مربع يسألك على كلمة السر قبل ما يمسح
+        const password = prompt("Enter your password to clear requests:");
+        
+        // كلمة السر هي dz123 (تقدر تبدلها منا)
+        if (password === "dz123") { 
+            if (confirm("Are you sure you've deleted all the orders?")) {
+                fetch(FIREBASE_URL, { method: "DELETE" })
+                .then(() => updateAdminInboxUI())
+                .catch(err => console.error("Error deleting:", err));
+            }
+        } else {
+            alert("Incorrect password! You cannot delete❌.");
         }
     });
 
-    // 4. ميزة الـ 5 ضغطات السرية لفتح الصندوق
+    // 4. ميزة الـ 5 ضغطات السرية لفتح الصندوق (تطلب كلمة سر لفتح الصندوق أصلاً!)
     let secretClickCount = 0;
     const trigger = document.querySelector('.admin-trigger');
     if (trigger) {
         trigger.addEventListener('click', function() {
             secretClickCount++;
             if (secretClickCount === 5) {
-                const inbox = document.getElementById('admin-inbox');
-                if (inbox) {
-                    inbox.style.display = inbox.style.display === 'none' ? 'block' : 'none';
-                    updateAdminInboxUI(); // جلب الطلبات عند الفتح
+                const accessCode = prompt("Enter the admin code:");
+                
+                if (accessCode === "dz123") { // الكود السري لفتح الصندوق
+                    const inbox = document.getElementById('admin-inbox');
+                    if (inbox) {
+                        inbox.style.display = inbox.style.display === 'none' ? 'block' : 'none';
+                        updateAdminInboxUI();
+                    }
+                } else {
+                    alert("❌ Incorrect code! You cannot open the admin box..");
                 }
                 secretClickCount = 0;
             }
         });
     }
 </script>
+
 
 
 
