@@ -12,7 +12,11 @@ const database = {
         ],
         "Tottenham Hotspur": [
             { name: "Xavi Simons", img: "Images/Screenshot 2026-05-13 224822.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bhcDOy1 " },   
-        ], 
+        ],
+        
+        "Nottingham Forest": [
+            { name: "Elliot Anderson", img: "Images/Screenshot 2026-06-16 025519.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qjOIjVO " },   
+        ],
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [] },
     "La Liga": {
