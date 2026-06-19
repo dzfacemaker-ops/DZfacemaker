@@ -68,7 +68,11 @@ const database = {
         "MC Alger": [
             { name: "Youcef Belaili", img: "Images/Screenshot 2026-04-14 225327.png", details: "Exclusive Face Pack for Algerian Ligue 1 project in PES 17.", link: " https://ouo.io/52BCsW " }
         ],
-        "CR Belouizdad": [], "JS Kabylie": [], "USM Alger": [], "ES Setif": [], "CS Constantine": []
+        "CR Belouizdad": [], "JS Kabylie": [], 
+        "USM Alger": [
+             { name: "Achraf Abada", img: "Images/Screenshot 2026-06-19 190432.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/nJxlsB " }
+
+        ], "ES Setif": [], "CS Constantine": []
     },
     "Other": {
         "Classic": [
