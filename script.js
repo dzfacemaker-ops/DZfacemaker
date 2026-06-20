@@ -112,6 +112,7 @@ const database = {
             { name: "Antoine Griezmann", img: "Images/Screenshot 2026-05-10 235423.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/JIP28z" },
             { name: "Mohamed Amoura", img: "Images/Screenshot 2026-04-15 181002.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/46bbgd" },
             { name: "Ismail Saibari", img: "Images/Screenshot 2026-06-13 235330.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/ESgYAO2" },
+            { name: "Alexis Vega", img: "Images/Screenshot 2026-06-21 011911.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/gh8iLFi " },
 
 
 
