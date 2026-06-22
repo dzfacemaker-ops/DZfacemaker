@@ -70,7 +70,8 @@ const database = {
         ],
         "CR Belouizdad": [], "JS Kabylie": [], 
         "USM Alger": [
-             { name: "Achraf Abada", img: "Images/Screenshot 2026-06-19 190432.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/nJxlsB " }
+             { name: "Achraf Abada", img: "Images/Screenshot 2026-06-19 190432.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/nJxlsB " },
+             { name: "Oussama Benbout", img: "Images/Screenshot 2026-06-20 000913.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/LY75r1 " }
 
         ], "ES Setif": [], "CS Constantine": []
     },
