@@ -66,7 +66,8 @@ const database = {
     "Ligue 2": { "Bordeaux": [], "Saint-Etienne": [] },
     "Algerian Ligue 1": {
         "MC Alger": [
-            { name: "Youcef Belaili", img: "Images/Screenshot 2026-04-14 225327.png", details: "Exclusive Face Pack for Algerian Ligue 1 project in PES 17.", link: " https://ouo.io/52BCsW " }
+            { name: "Youcef Belaili", img: "Images/Screenshot 2026-04-14 225327.png", details: "Exclusive Face Pack for Algerian Ligue 1 project in PES 17.", link: " https://ouo.io/52BCsW " },
+            { name: "Mohamed Bangoura", img: "Images/Screenshot 2026-06-24 192830.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/TDc7YfW " },
         ],
         "CR Belouizdad": [], "JS Kabylie": [], 
         "USM Alger": [
