@@ -17,6 +17,9 @@ const database = {
         "Nottingham Forest": [
             { name: "Elliot Anderson", img: "Images/Screenshot 2026-06-16 025519.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qjOIjVO " },   
         ],
+        "Newcastle United": [
+            { name: "Bruno Guimarães", img: "Images/Screenshot 2026-06-30 010113.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/jwUjib " },   
+        ],
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [] },
     "La Liga": {
