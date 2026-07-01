@@ -38,9 +38,12 @@ const database = {
         
         ],
      
-         "Atletico Madrid": [
-           { name: "Juan MUsso", img: "Images/Screenshot 2026-05-26 202631.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/m2q40y " }
-         ]
+        "Atletico Madrid": [
+           { name: "Juan Musso", img: "Images/Screenshot 2026-05-26 202631.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/m2q40y " }
+        ],
+        "Real Betis": [
+          { name: "Borja Iglesias", img: "Images/Screenshot 2026-07-02 015550.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/1VKr4Y " }  
+        ]
     },
     "La Liga 2": { "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [], 
