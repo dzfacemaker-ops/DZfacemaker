@@ -57,7 +57,8 @@ const database = {
         ] },
     "Bundesliga": { "Bayern Munich": [
             { name: "Michael Olice", img: "Images/Screenshot 2026-05-07 002206.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/CSIt1Y " },
-            { name: "Luis Diaz", img: "Images/Screenshot 2026-05-27 225346.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/m04yQZ " }
+            { name: "Luis Diaz", img: "Images/Screenshot 2026-05-27 225346.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/m04yQZ " },
+            { name: "Nathaniel Brown", img: "Images/Screenshot 2026-07-07 134629.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qw32Bk " }
     ], "Borussia Dortmund": [], "Bayer Leverkusen": [] },
     "Bundesliga 2": { "Schalke 04": [], "Hertha BSC": [],   
     "Karlsruhe SC": [
