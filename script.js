@@ -46,7 +46,9 @@ const database = {
         ]
     },
     "La Liga 2": { "Espanyol": [], "Real Zaragoza": [] },
-    "Serie A": { "Juventus": [], "Inter Milan": [], 
+    "Serie A": { "Juventus": [], "Inter Milan": [
+            { name: "Marcus Thuram", img: "Images/Screenshot 2026-07-15 145753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/BeT7yE " },
+    ], 
         "AC Milan": [
             { name: "Loftus Cheek", img: "Images/Screenshot 2026-04-12 224508.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wqHjzW " },
             { name: "Strahinja Pavlovic", img: "Images/Screenshot 2026-05-25 003414.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/IwYb0VT " },
