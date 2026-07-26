@@ -26,7 +26,8 @@ const database = {
         "Barcelona": [
             { name: "Xavi Espart", img: "Images/Screenshot 2026-04-09 052224.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/5m5tzV " },
             { name: "Lamine Yamal", img: "Images/Screenshot 2026-05-03 230458.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/H8TKMu " },
-            { name: "Raphinha", img: "Images/Screenshot 2026-05-09 000349.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/O6PYCI " }
+            { name: "Raphinha", img: "Images/Screenshot 2026-05-09 000349.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/O6PYCI " },
+            { name: "Jesse Bisiwu", img: "Images/Screenshot 2026-07-25 151155.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wPGoSF " },
         ],
         "Real Madrid": [
             { name: "Kelyan Mbappè", img: "Images/Screenshot 2026-05-15 010107.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/w5h6bN " },
