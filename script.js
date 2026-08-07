@@ -35,7 +35,8 @@ const database = {
             { name: "Thiago Pitarch", img: "Images/Screenshot 2026-04-10 202531.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/kz52PWz" },
             { name: "Diego Aguado", img: "Images/Screenshot 2026-04-30 182143.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Ey2Bew " },
             { name: "Alvaro Leiva", img: "Images/Screenshot 2026-05-01 194953.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZVa4yKN " },
-            { name: "Thibaut courtois", img: "Images/Screenshot 2026-05-25 220104.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/TUN9Uw " }
+            { name: "Thibaut courtois", img: "Images/Screenshot 2026-05-25 220104.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/TUN9Uw " },
+            { name: "Vinicius Jr", img: "Images/Screenshot 2026-08-07 195106.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZRkyQHL " },
         
         ],
      
