@@ -134,6 +134,7 @@ const database = {
             { name: "Mostafa Shoubir", img: "Images/Screenshot 2026-07-11 145728.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dA1SVq " },
             { name: "Monsef Bekrar", img: "Images/Screenshot 2026-07-22 122928.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/N9CGP4 " },
             { name: "Lucas Ribeiro", img: "Images/Screenshot 2026-07-27 143758.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/VwBi5Y " },
+            { name: "Kheireddine Toual", img: "Images/Screenshot 2026-08-08 141350.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/0JM7Bf " }, 
 
 
 
