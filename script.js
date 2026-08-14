@@ -37,7 +37,7 @@ const database = {
             { name: "Alvaro Leiva", img: "Images/Screenshot 2026-05-01 194953.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZVa4yKN " },
             { name: "Thibaut courtois", img: "Images/Screenshot 2026-05-25 220104.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/TUN9Uw " },
             { name: "Vinicius Jr", img: "Images/Screenshot 2026-08-07 195106.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZRkyQHL " },
-        
+            { name: "Carlos Espi", img: "Images/Screenshot 2026-08-14 141749.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/sOMuoI " },
         ],
      
         "Atletico Madrid": [
