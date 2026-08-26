@@ -20,6 +20,9 @@ const database = {
         "Newcastle United": [
             { name: "Bruno Guimarães", img: "Images/Screenshot 2026-06-30 010113.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/jwUjib " },   
         ],
+         "Aston Villa": [
+            { name: "Johan Manzambi", img: "Images/Screenshot 2026-08-26 132255.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/zQ4i9GW " },   
+        ],       
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [] },
     "La Liga": {
@@ -138,7 +141,7 @@ const database = {
             { name: "Kheireddine Toual", img: "Images/Screenshot 2026-08-08 141350.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/0JM7Bf " }, 
             { name: "Amine Chiakha", img: "Images/Screenshot 2026-08-21 153849.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/j1JCcpB " },  
             { name: "Leonel Flores", img: "Images/Screenshot 2026-08-22 131734.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/QRnWZ7 " },   
-            { name: "Dylan Gorosito", img: "Images/Screenshot 2026-08-25 162345.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/1WpnD7L " },   
+            { name: "Dylan Gorosito", img: "Images/Screenshot 2026-08-25 162345.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8wja5G " },   
 
 
 
