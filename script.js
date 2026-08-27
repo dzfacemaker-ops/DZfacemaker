@@ -110,6 +110,7 @@ const database = {
             { name: "Joào Pinto", img: "Images/Screenshot 2026-08-16 143814.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/6XQ5qH " }, 
             { name: "Jonathan Zebina", img: "Images/Screenshot 2026-08-17 144942.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/B9lwdi " },    
             { name: "Harry Kewell", img: "Images/Screenshot 2026-08-24 171044.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/iOHKqD " },    
+            { name: "Craig Bellamy", img: "Images/Screenshot 2026-08-27 135007.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/yXgCw1Q " },    
         ],
         "Other clubs": [
             { name: "Neymar Jr", img: "Images/Screenshot 2026-06-08 213304.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/Yyx5jg7" },
@@ -143,6 +144,7 @@ const database = {
             { name: "Leonel Flores", img: "Images/Screenshot 2026-08-22 131734.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/QRnWZ7 " },   
             { name: "Dylan Gorosito", img: "Images/Screenshot 2026-08-25 162345.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8wja5G " },   
             { name: "Abdellah Ziani", img: "Images/Screenshot 2026-08-26 160107.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Chmm3D " },   
+            { name: "Fares ghedjemis", img: "Images/Screenshot 2026-08-27 122759.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/4Bubnt " },   
 
 
 
