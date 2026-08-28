@@ -31,6 +31,7 @@ const database = {
             { name: "Lamine Yamal", img: "Images/Screenshot 2026-05-03 230458.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/H8TKMu " },
             { name: "Raphinha", img: "Images/Screenshot 2026-05-09 000349.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/O6PYCI " },
             { name: "Jesse Bisiwu", img: "Images/Screenshot 2026-07-25 151155.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wPGoSF " },
+            { name: "Hamza Abdelkarim", img: "Images/Screenshot 2026-08-28 122912.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/LwMXDG7 " },
         ],
         "Real Madrid": [
             { name: "Kelyan Mbappè", img: "Images/Screenshot 2026-05-15 010107.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/w5h6bN " },
@@ -48,7 +49,11 @@ const database = {
         ],
         "Real Betis": [
           { name: "Borja Iglesias", img: "Images/Screenshot 2026-07-02 015550.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/1VKr4Y " }  
-        ]
+        ],
+        "Sevilla Fc": [
+          { name: "Robbie Ure", img: "Images/Screenshot 2026-08-28 140104.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/7qGvtZ " }  
+        ],
+
     },
     "La Liga 2": { "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [
