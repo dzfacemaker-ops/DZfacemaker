@@ -3,7 +3,10 @@ const database = {
         "Chelsea": [
             
         ],
-        "Manchester United": [], "Liverpool": [], 
+        "Manchester United": [],
+         "Liverpool": [
+            { name: "Lucca Brughmans", img: "Images/Screenshot 2026-08-31 150828.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZtdVoKq " },  
+         ], 
         "Manchester City": [
             { name: "Reigan Heskey", img: "Images/Screenshot 2026-04-11 221356.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ToA4qX " },  
         ], 
@@ -22,7 +25,11 @@ const database = {
         ],
          "Aston Villa": [
             { name: "Johan Manzambi", img: "Images/Screenshot 2026-08-26 132255.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/zQ4i9GW " },   
-        ],       
+        ], 
+         
+        "Hull City": [
+            { name: "Mohamed Belloumi", img: "Images/Screenshot 2026-08-31 134407.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Y648nH " },   
+        ],      
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [] },
     "La Liga": {
