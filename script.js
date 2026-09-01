@@ -109,6 +109,8 @@ const database = {
              { name: "Dylan Gorosito", img: "Images/Screenshot 2026-08-25 162345.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8wja5G " },  
              { name: "Tomas Aranda", img: "Images/Screenshot 2026-08-29 143740.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/txQG5ye " },        
              { name: "Facundo Herrera", img: "Images/Screenshot 2026-08-30 141219.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/a76CDV " },        
+             { name: "Camilo Rey Domenech", img: "Images/Screenshot 2026-09-01 143141.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/0LCJlG " },        
+
 
              ],
          "Rosario Central": [ 
@@ -170,6 +172,7 @@ const database = {
             { name: "Abdellah Ziani", img: "Images/Screenshot 2026-08-26 160107.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Chmm3D " },   
             { name: "Fares ghedjemis", img: "Images/Screenshot 2026-08-27 122759.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/4Bubnt " },   
             { name: "Junior Bueno", img: "Images/Screenshot 2026-08-29 130557.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3vx4Ka " }, 
+            { name: "Tigran Avanesyan", img: "Images/Screenshot 2026-09-01 124723.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dcyD0oR " }, 
            
 
 
