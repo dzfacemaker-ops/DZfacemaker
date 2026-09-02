@@ -39,6 +39,7 @@ const database = {
             { name: "Raphinha", img: "Images/Screenshot 2026-05-09 000349.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/O6PYCI " },
             { name: "Jesse Bisiwu", img: "Images/Screenshot 2026-07-25 151155.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wPGoSF " },
             { name: "Hamza Abdelkarim", img: "Images/Screenshot 2026-08-28 122912.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/LwMXDG7 " },
+            { name: "Josue Caicedo", img: "Images/Screenshot 2026-09-02 145820.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/gwyafK " },
         ],
         "Real Madrid": [
             { name: "Kelyan Mbappè", img: "Images/Screenshot 2026-05-15 010107.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/w5h6bN " },
@@ -69,7 +70,14 @@ const database = {
         "AC Milan": [
             { name: "Loftus Cheek", img: "Images/Screenshot 2026-04-12 224508.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wqHjzW " },
             { name: "Strahinja Pavlovic", img: "Images/Screenshot 2026-05-25 003414.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/IwYb0VT " },
-        ] },
+            
+        ], 
+        "AS Roma": [
+            { name: "Leonardo Balerdi", img: "Images/Screenshot 2026-09-02 125845.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/k0L96T " },
+
+        ],
+    },
+
     "Serie B": { "Sampdoria": [], "Bari": [], 
         "Helas Virona": [
             { name: "Rafik Belghali", img: "Images/Screenshot 2026-04-08 021035.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/GGXJPdK " }
