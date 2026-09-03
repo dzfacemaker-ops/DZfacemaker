@@ -125,7 +125,17 @@ const database = {
             { name: "Vicente Pizarro", img: "Images/Screenshot 2026-08-30 155039.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/5u7iuQ " },         
             
             ],
+         "CA Tiger": [ 
+            { name: "Nacho Russo", img: "Images2/Screenshot 2026-09-03 150423.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/5QzAoq " },         
+            
+            ],   
 
+        },
+    "Brasileirão Série A": {  
+         "CR Flamengo": [ 
+            { name: "Anthony Valencia", img: "Images2/Screenshot 2026-09-03 124501.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/aKZPMBQ " },          
+        ],
+        
         },
     "Other": {
         "Classic": [
