@@ -50,6 +50,7 @@ const database = {
             { name: "Thibaut courtois", img: "Images/Screenshot 2026-05-25 220104.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/TUN9Uw " },
             { name: "Vinicius Jr", img: "Images/Screenshot 2026-08-07 195106.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZRkyQHL " },
             { name: "Carlos Espi", img: "Images/Screenshot 2026-08-14 141749.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/sOMuoI " },
+            { name: "Sergio Martinez", img: "Images2/Screenshot 2026-09-04 141903.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Xhrg90 " },
         ],
      
         "Atletico Madrid": [
@@ -157,6 +158,7 @@ const database = {
             { name: "Jonathan Zebina", img: "Images/Screenshot 2026-08-17 144942.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/B9lwdi " },    
             { name: "Harry Kewell", img: "Images/Screenshot 2026-08-24 171044.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/iOHKqD " },    
             { name: "Craig Bellamy", img: "Images/Screenshot 2026-08-27 135007.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/yXgCw1Q " },    
+            { name: "Diego Tristàn", img: "Images2/Screenshot 2026-09-04 125642.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/B72svU " },    
         ],
         "Other clubs": [
             { name: "Neymar Jr", img: "Images/Screenshot 2026-06-08 213304.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/Yyx5jg7" },
