@@ -73,6 +73,7 @@ const database = {
     "La Liga 2": { "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [
             { name: "Marcus Thuram", img: "Images/Screenshot 2026-07-15 145753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/BeT7yE " },
+            { name: "Leon Jakirovic", img: "Images2/Screenshot 2026-09-06 143301.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/M6QLB5 " },
     ], 
         "AC Milan": [
             { name: "Loftus Cheek", img: "Images/Screenshot 2026-04-12 224508.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/wqHjzW " },
@@ -102,6 +103,7 @@ const database = {
             { name: "Luis Diaz", img: "Images/Screenshot 2026-05-27 225346.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/m04yQZ " },
             { name: "Nathaniel Brown", img: "Images/Screenshot 2026-07-07 134629.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qw32Bk " },
             { name: "Ismail Saibari", img: "Images/Screenshot 2026-06-13 235330.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/ESgYAO2" },
+            { name: "Santos Daiber", img: "Images2/Screenshot 2026-09-06 153206.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Vdb74C " },
     ], "Borussia Dortmund": [], "Bayer Leverkusen": [] },
     "Bundesliga 2": { "Schalke 04": [], "Hertha BSC": [],   
     "Karlsruhe SC": [
