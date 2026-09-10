@@ -29,6 +29,9 @@ const database = {
          
         "Hull City": [
             { name: "Mohamed Belloumi", img: "Images/Screenshot 2026-08-31 134407.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Y648nH " },   
+        ],
+         "Sunderland AFC": [
+            { name: "Riquelme Angulo", img: "Images/Screenshot 2026-09-10 123725.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/uA2lnG " },   
         ],      
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [],
@@ -180,7 +183,7 @@ const database = {
         
         },
     "ORA League": { 
-        "AL Ahly": [
+        "AL Ahly sc": [
             { name: "Mostafa Shoubir", img: "Images/Screenshot 2026-07-11 145728.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dA1SVq " },
             { name: "Monsef Bekrar", img: "Images/Screenshot 2026-07-22 122928.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/N9CGP4 " },
 
@@ -195,6 +198,7 @@ const database = {
         ],
          "Zamalek sc": [
             { name: "Juan Bezerra", img: "Images2/Screenshot 2026-09-05 133335.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/U2K5jbJ " }, 
+            { name: "Mohamed Hamad", img: "Images2/Screenshot 2026-09-10 141010.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/k8f6zA " }, 
         ],
         },
     "Other": {
