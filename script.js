@@ -58,6 +58,7 @@ const database = {
             { name: "Vinicius Jr", img: "Images/Screenshot 2026-08-07 195106.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ZRkyQHL " },
             { name: "Carlos Espi", img: "Images/Screenshot 2026-08-14 141749.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/sOMuoI " },
             { name: "Sergio Martinez", img: "Images2/Screenshot 2026-09-04 141903.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Xhrg90 " },
+            { name: "Yan Diomande", img: "Images2/Screenshot 2026-09-11 152624.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qiXiOF " },
         ],
      
         "Atletico Madrid": [
@@ -164,7 +165,11 @@ const database = {
          "CA Tiger": [ 
             { name: "Nacho Russo", img: "Images2/Screenshot 2026-09-03 150423.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/5QzAoq " },         
             
-            ],   
+            ], 
+          "CA Vélez": [ 
+            { name: "Ronaldo Martinez", img: "Images/Screenshot 2026-09-12 125427.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/vwwwqcU " },         
+            
+            ],     
 
         },
     "Brasileirão Série A": {  
