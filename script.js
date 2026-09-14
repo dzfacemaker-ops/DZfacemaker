@@ -59,6 +59,7 @@ const database = {
             { name: "Carlos Espi", img: "Images/Screenshot 2026-08-14 141749.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/sOMuoI " },
             { name: "Sergio Martinez", img: "Images2/Screenshot 2026-09-04 141903.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Xhrg90 " },
             { name: "Yan Diomande", img: "Images2/Screenshot 2026-09-11 152624.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qiXiOF " },
+            { name: "Alexis Ciria", img: "Images2/Screenshot 2026-09-13 143811.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/7YDObb " },
         ],
      
         "Atletico Madrid": [
@@ -158,6 +159,9 @@ const database = {
 
 
              ],
+         "River Plate": [ 
+             { name: "Tobias Andrada", img: "Images2/Screenshot 2026-09-14 141013.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/gtip06 " },
+            ],         
          "Rosario Central": [ 
             { name: "Vicente Pizarro", img: "Images/Screenshot 2026-08-30 155039.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/5u7iuQ " },         
             
