@@ -208,6 +208,7 @@ const database = {
          "Zamalek sc": [
             { name: "Juan Bezerra", img: "Images2/Screenshot 2026-09-05 133335.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/U2K5jbJ " }, 
             { name: "Mohamed Hamad", img: "Images2/Screenshot 2026-09-10 141010.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/k8f6zA " }, 
+            { name: "Ahmed Sherif", img: "Images2/Screenshot 2026-09-15 140427.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/AYHb65 " }, 
         ],
         },
     "Other": {
@@ -252,6 +253,7 @@ const database = {
             { name: "Amine Chiakha", img: "Images/Screenshot 2026-08-21 153849.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/j1JCcpB " },  
             { name: "Junior Bueno", img: "Images/Screenshot 2026-08-29 130557.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3vx4Ka " }, 
             { name: "Tigran Avanesyan", img: "Images/Screenshot 2026-09-01 124723.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dcyD0oR " },     
+            { name: "Nabil Fekir", img: "Images2/Screenshot 2026-09-15 123550.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/n99DwRL " },     
         
         
         ]
