@@ -109,7 +109,12 @@ const database = {
             { name: "Nathaniel Brown", img: "Images/Screenshot 2026-07-07 134629.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qw32Bk " },
             { name: "Ismail Saibari", img: "Images/Screenshot 2026-06-13 235330.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/ESgYAO2" },
             { name: "Santos Daiber", img: "Images2/Screenshot 2026-09-06 153206.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Vdb74C " },
-    ], "Borussia Dortmund": [], "Bayer Leverkusen": [] },
+    ],  "Bayer Leverkusen": [
+        { name: "Jarell Quansah", img: "Images2/Screenshot 2026-09-16 132333.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/6hQjpv " },
+
+    ],
+      "Borussia Dortmund": [],
+      },
     "Bundesliga 2": { "Schalke 04": [], "Hertha BSC": [],   
     "Karlsruhe SC": [
              { name: "Louey Ben Farhat", img: "Images/Screenshot 2026-06-17 021404.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/ErNSat " },
@@ -173,7 +178,11 @@ const database = {
           "CA Vélez": [ 
             { name: "Ronaldo Martinez", img: "Images/Screenshot 2026-09-12 125427.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/vwwwqcU " },         
             
-            ],     
+            ],
+          "CA Talleres": [ 
+            { name: "Giovanni Baroni", img: "Screenshot 2026-09-16 144638.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/FpQ8W9 " },         
+            
+            ],       
 
         },
     "Brasileirão Série A": {  
