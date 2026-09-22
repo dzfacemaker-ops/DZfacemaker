@@ -31,7 +31,7 @@ const database = {
             { name: "Mohamed Belloumi", img: "Images/Screenshot 2026-08-31 134407.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Y648nH " },   
         ],
          "Sunderland AFC": [
-            { name: "Riquelme Angulo", img: "Images/Screenshot 2026-09-10 123725.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/uA2lnG " },   
+            { name: "Riquelme Angulo", img: "Images2/Screenshot 2026-09-10 123725.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/uA2lnG " },   
         ],      
     },
     "Championship (ENG 2)": { "Leicester City": [], "Leeds United": [], "Southampton": [],
@@ -75,7 +75,13 @@ const database = {
           { name: "Zakaria Eddahchouri", img: "Images/Screenshot 2026-05-22 225029.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/gGYUnj " },
         ],
     },
-    "La Liga 2": { "Espanyol": [], "Real Zaragoza": [] },
+    "La Liga 2": {
+         "C.D Leganés": [ 
+            { name: "Ismail Gharbi", img: "Images2/Screenshot 2026-09-21 182902.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qOt5f7 " },         
+            
+            ],  
+       
+        "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [
             { name: "Marcus Thuram", img: "Images/Screenshot 2026-07-15 145753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/BeT7yE " },
             { name: "Leon Jakirovic", img: "Images2/Screenshot 2026-09-06 143301.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/M6QLB5 " },
@@ -176,13 +182,18 @@ const database = {
             
             ], 
           "CA Vélez": [ 
-            { name: "Ronaldo Martinez", img: "Images/Screenshot 2026-09-12 125427.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/vwwwqcU " },         
+            { name: "Ronaldo Martinez", img: "Images2/Screenshot 2026-09-12 125427.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/vwwwqcU " },         
             
             ],
           "CA Talleres": [ 
-            { name: "Giovanni Baroni", img: "Screenshot 2026-09-16 144638.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/FpQ8W9 " },         
+            { name: "Giovanni Baroni", img: "Images2/Screenshot 2026-09-16 144638.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/FpQ8W9 " },         
             
-            ],       
+            ], 
+           "Deportivo Reistra": [ 
+            { name: "Ighacio Arce", img: "Images2/Screenshot 2026-09-21 143024.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Y4qm0fN " },         
+            
+            ],        
+           
 
         },
     "Brasileirão Série A": {  
