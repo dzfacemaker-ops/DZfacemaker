@@ -79,7 +79,11 @@ const database = {
          "C.D Leganés": [ 
             { name: "Ismail Gharbi", img: "Images2/Screenshot 2026-09-21 182902.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qOt5f7 " },         
             
-            ],  
+            ],
+         "Real Racing Club": [ 
+            { name: "Jeremy Arevalo", img: "Images2/Screenshot 2026-09-24 142031.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bENGka " },         
+            
+            ],     
        
         "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [
@@ -147,6 +151,12 @@ const database = {
     ], 
     
     "Saint-Etienne": [] },
+    "Eredivisie": { 
+        "Feyenoord Rotterdam": [
+            { name: "Stephano Carrilo", img: "Images2/Screenshot 2026-09-23 182244.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/4cw5G3 " },
+
+        ], 
+        },
     "Algerian Ligue 1": {
         "MC Alger": [
             { name: "Youcef Belaili", img: "Images/Screenshot 2026-04-14 225327.png", details: "Exclusive Face Pack for Algerian Ligue 1 project in PES 17.", link: " https://ouo.io/52BCsW " },
