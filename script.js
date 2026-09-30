@@ -81,7 +81,8 @@ const database = {
             
             ],
          "Real Racing Club": [ 
-            { name: "Jeremy Arevalo", img: "Images2/Screenshot 2026-09-24 142031.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bENGka " },         
+            { name: "Jeremy Arevalo", img: "Images2/Screenshot 2026-09-24 142031.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bENGka " },        
+            { name: "Sergio Canales", img: "Images2/Screenshot 2026-09-30 115623.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/6PZD2Z " },         
             
             ],     
        
@@ -143,6 +144,9 @@ const database = {
             ],
             "OGC Nice": [
               { name: "Mohamed Amoura", img: "Images/Screenshot 2026-04-15 181002.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/46bbgd" },
+            ],
+            "Lemans FC": [
+              { name: "Adil Bourabaa", img: "Images2/Screenshot 2026-09-29 172348.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3mvkvKa " },
             ],
 
 },
