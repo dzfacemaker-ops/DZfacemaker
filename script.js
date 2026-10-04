@@ -84,7 +84,11 @@ const database = {
             { name: "Jeremy Arevalo", img: "Images2/Screenshot 2026-09-24 142031.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bENGka " },        
             { name: "Sergio Canales", img: "Images2/Screenshot 2026-09-30 115623.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/6PZD2Z " },         
             
-            ],     
+            ], 
+         "Real Oviedo": [ 
+            { name: "David Jimenez", img: "Images2/Screenshot 2026-10-03 161022.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/CLm4Va " },         
+            
+            ],       
        
         "Espanyol": [], "Real Zaragoza": [] },
     "Serie A": { "Juventus": [], "Inter Milan": [
@@ -147,6 +151,9 @@ const database = {
             ],
             "Lemans FC": [
               { name: "Adil Bourabaa", img: "Images2/Screenshot 2026-09-29 172348.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3mvkvKa " },
+            ],
+            "Paris FC": [
+              { name: "Samir Chergui", img: "Images2/Screenshot 2026-10-04 120517.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/nrNV7U " },
             ],
 
 },
