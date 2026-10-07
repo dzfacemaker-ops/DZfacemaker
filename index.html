@@ -7,12 +7,21 @@
 
     <link rel="icon" type="image/png" href="images/favicon.png">
 
+    <meta name="description" content="Download high-quality professional PES 2017 face packs for all major leagues: Premier League, La Liga, Serie A, Bundesliga and more.">
+    <meta name="keywords" content="PES 2017 faces, PES 17 face pack, PES 2017 patch, DZfacemaker, football faces download">
+    <meta name="theme-color" content="#080d0a">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://dzfacemaker-ops.github.io/DZfacemaker/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="DZfacemaker">
+    <meta property="og:url" content="https://dzfacemaker-ops.github.io/DZfacemaker/">
     <meta property="og:title" content="DZfacemaker | Premium PES 17 Faces Database">
-    <meta property="og:description" content="Download high-quality professional face packs for pes 2017. All major leagues included!">
-    <meta property="og:image" content="images/preview.png">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:image" content="images/preview.png">
+    <meta property="og:description" content="Download high-quality professional face packs for PES 2017. All major leagues included!">
+    <meta property="og:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/images/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DZfacemaker | Premium PES 17 Faces Database">
+    <meta name="twitter:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/images/preview.png">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DZfacemaker","url":"https://dzfacemaker-ops.github.io/DZfacemaker/","description":"PES 2017 face packs for all major leagues"}</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -30,6 +39,12 @@
             </div>
         </div>
     </header>
+
+    <section class="hero"><div class="hero-in">
+        <h2>Premium <em>PES 17</em> Faces Database</h2>
+        <p>High-quality face packs for the biggest leagues. Pick a league, choose a club, download in one click.</p>
+        <div class="hero-tags"><span>⚡ Fast download</span><span>🏆 Major leagues</span><span>🆕 Updated often</span></div>
+    </div></section>
 
     <div class="main-layout">
         <aside class="sidebar">
@@ -53,165 +68,13 @@
            
    <!--  حط هذا الكود الجديد في البلاصة اللي مسحت منها الكود القديم -->
 <div class="request-box">
-    <h3 class="admin-trigger"><i class="fas fa-paper-plane"></i> Ask for a player's face</h3>
+    <h3><i class="fas fa-paper-plane"></i> Ask for a player's face</h3>
     <div class="request-form-container">
         <input type="text" id="player-input" placeholder="Write a player's name here..." autocomplete="off">
         <button id="submit-request-btn">Submit the request</button>
     </div>
 </div>
 
-<!-- صندوق رسائل الأدمن المخفي السحابي -->
-<div id="admin-inbox" style="display: none; margin-top: 20px; padding: 15px; background: #1a1a1a; border: 2px dashed #00e676; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-    <h3 style="color: #00e676; text-align: center; font-size: 1.05rem; margin-bottom: 12px; font-weight: 600;"><i class="fas fa-envelope-open-text"></i> Admin's Inbox 📬</h3>
-    <ul id="requests-list" style="list-style: none; padding: 0; margin-top: 10px; text-align: left;">
-        <!-- الرسائل القادمة من السيرفر تظهر هنا -->
-    </ul>
-    <button id="clear-requests-btn" style="background: #ff1744; color: white; width: 100%; border: none; padding: 10px; border-radius: 8px; cursor: pointer; margin-top: 12px; font-weight: bold; font-size: 0.9rem; transition: background 0.3s;">Delete all messages</button>
-</div>
-
-<script>
-    const FIREBASE_URL = "https://dzfacemaker-requests-default-rtdb.firebaseio.com/requests.json";
-
-    // 1. دالة إرسال الطلب (للمتابعين - شغالة دايماً عادي)
-    document.getElementById('submit-request-btn').addEventListener('click', function() {
-        const input = document.getElementById('player-input');
-        const playerName = input.value.trim();
-
-        if (playerName === "") {
-            alert("Please write a player's name first!");
-            return;
-        }
-
-        const requestData = {
-            name: playerName,
-            date: new Date().toLocaleDateString('en-US')
-        };
-
-        fetch(FIREBASE_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(requestData)
-        })
-        .then(res => {
-            if (res.ok) {
-                alert("Your request has been sent successfully! 🚀");
-                input.value = "";
-            } else {
-                alert("Error sending request.");
-            }
-        })
-        .catch(err => console.error("Error:", err));
-    });
-
-    // 2. دالة جلب وقراءة الطلبات (تطلب منك الكود السري)
-    function updateAdminInboxUI() {
-        const list = document.getElementById('requests-list');
-        if (!list) return;
-        list.innerHTML = "";
-
-        fetch(FIREBASE_URL)
-        .then(res => res.json())
-        .then(data => {
-            if (!data) {
-                list.innerHTML = "<li style='color: #888; text-align: center; padding: 10px;'>No new requests.</li>";
-                return;
-            }
-
-            Object.keys(data).forEach(key => {
-                const req = data[key];
-                const li = document.createElement('li');
-                li.style.background = "#121212";
-                li.style.padding = "10px 12px";
-                li.style.marginBottom = "8px";
-                li.style.borderRadius = "6px";
-                li.style.borderLeft = "4px solid #00e676";
-                li.style.color = "#fff";
-                li.style.display = "flex";
-                li.style.justifyContent = "space-between";
-                li.style.alignItems = "center";
-                li.innerHTML = `<strong>${req.name}</strong> <span style="font-size: 0.75rem; color: #888;">${req.date}</span>`;
-                list.appendChild(li);
-            });
-        })
-        .catch(err => console.error("Error reading:", err));
-    }
-
-    // 3. دالة مسح كل الرسائل (محمية بطلب كلمة سر تخرجلك في الشاشة)
-    document.getElementById('clear-requests-btn').addEventListener('click', function() {
-        // يخرجلك مربع يسألك على كلمة السر قبل ما يمسح
-        const password = prompt("Enter your password to clear requests:");
-        
-        // كلمة السر هي dz123 (تقدر تبدلها منا)
-        if (password === "dz123") { 
-            if (confirm("Are you sure you've deleted all the orders?")) {
-                fetch(FIREBASE_URL, { method: "DELETE" })
-                .then(() => updateAdminInboxUI())
-                .catch(err => console.error("Error deleting:", err));
-            }
-        } else {
-            alert("Incorrect password! You cannot delete❌.");
-        }
-    });
-
-    // 4. ميزة الـ 5 ضغطات السرية لفتح الصندوق (تطلب كلمة سر لفتح الصندوق أصلاً!)
-    let secretClickCount = 0;
-    const trigger = document.querySelector('.admin-trigger');
-    if (trigger) {
-        trigger.addEventListener('click', function() {
-            secretClickCount++;
-            if (secretClickCount === 5) {
-                const accessCode = prompt("Enter the admin code:");
-                
-                if (accessCode === "dz123") { // الكود السري لفتح الصندوق
-                    const inbox = document.getElementById('admin-inbox');
-                    if (inbox) {
-                        inbox.style.display = inbox.style.display === 'none' ? 'block' : 'none';
-                        updateAdminInboxUI();
-                    }
-                } else {
-                    alert("❌ Incorrect code! You cannot open the admin box..");
-                }
-                secretClickCount = 0;
-            }
-        });
-    }
-</script>
-
-
-
-
-
-<script>
-    // هاد الكود الصغير يضمن أن الزر يخدم حتى لو صرى مشكل في الملف الخارجي
-    document.getElementById('submit-request-btn').addEventListener('click', () => {
-        if (typeof sendPlayerRequest === 'function') {
-            sendPlayerRequest();
-        } else {
-            // إذا لم يجد الدالة في script.js، يطبقها هنا مباشرة
-            const input = document.getElementById('player-input');
-            const playerName = input.value.trim();
-
-            if (playerName === "") {
-                alert("Done!");
-                return;
-            }
-
-            let savedRequests = JSON.parse(localStorage.getItem('pes_requests')) || [];
-            savedRequests.push({
-                name: playerName,
-                date: new Date().toLocaleDateString('ar-DZ')
-            });
-
-            localStorage.setItem('pes_requests', JSON.stringify(savedRequests));
-            alert("Your request has been sent successfully!");
-            input.value = "";
-            
-            if (typeof updateAdminInbox === 'function') {
-                updateAdminInbox();
-            }
-        }
-    });
-</script>
 
         </aside>
 
@@ -221,6 +84,7 @@
                 <button id="back-to-home" class="home-btn" style="display: none;"><i class="fas fa-home"></i> Back to Feed</button>
             </div>
             
+            <section id="top-box" class="top-box" style="display:none"></section>
             <div id="display-grid" class="faces-grid">
                 </div>
 
@@ -251,6 +115,11 @@
         <p>&copy; 2026 <strong>DZfacemaker</strong>. All Rights Reserved. Designed for PES 17 Community.</p>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="firebase-config.js"></script>
     <script src="script.js"></script>
+    <script src="social.js"></script>
 </body>
 </html>
