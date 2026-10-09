@@ -24,71 +24,45 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DZfacemaker","url":"https://dzfacemaker-ops.github.io/DZfacemaker/","description":"PES 2017 face packs for all major leagues"}</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="main-header"><div class="wrap header-container">
+  <a class="logo" href="#top"><h1>DZ<span>facemaker</span></h1></a>
+  <div class="search-wrapper"><i class="fas fa-search search-icon"></i>
+    <input type="text" id="search-input" placeholder="Search a player or club..." autocomplete="off"></div>
+  <div class="head-social">
+    <a href="https://www.youtube.com/@DZfacemaker" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://www.facebook.com/61577257435908/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  </div>
+</div></header>
 
-    <header class="main-header">
-        <div class="header-container">
-            <div class="logo">
-                <h1>DZ<span>facemaker</span></h1>
-            </div>
-            <div class="search-wrapper">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" id="search-input" placeholder="Search for player faces (e.g., Neymar, Bellingham)...">
-            </div>
-        </div>
-    </header>
+<section class="hero" id="top"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">PES 2017 · Face Packs</span>
+    <h2>The most realistic <em>faces</em> for your PES&nbsp;17.</h2>
+    <p>Hand-made, high-quality face packs for the biggest leagues. Find your player, download, play.</p>
+    <a class="cta" href="#faces">Browse faces <i class="fas fa-arrow-down"></i></a>
+  </div>
+  <div class="stats">
+    <div><b id="st-faces">0</b><span>Faces</span></div>
+    <div><b id="st-clubs">0</b><span>Clubs</span></div>
+    <div><b id="st-leagues">0</b><span>Leagues</span></div>
+  </div>
+</div></section>
 
-    <section class="hero"><div class="hero-in">
-        <h2>Premium <em>PES 17</em> Faces Database</h2>
-        <p>High-quality face packs for the biggest leagues. Pick a league, choose a club, download in one click.</p>
-        <div class="hero-tags"><span>⚡ Fast download</span><span>🏆 Major leagues</span><span>🆕 Updated often</span></div>
-    </div></section>
+<nav class="league-bar" aria-label="Leagues"><div class="wrap"><ul id="leagues-list"></ul></div></nav>
 
-    <div class="main-layout">
-        <aside class="sidebar">
-            <div class="sidebar-title">
-                <i class="fas fa-trophy"></i>
-                <h2>Leagues</h2>
-            </div>
-            <ul id="leagues-list">
-                </ul>
-            
-            <div class="social-links">
-                <p>Follow me on</p>
-
-                <a href="https://www.youtube.com/@DZfacemaker" target="_blank" class="social-btn youtube">
-                    <i class="fab fa-youtube"></i> Youtube
-                </a>
-                <a href="https://www.facebook.com/61577257435908/" target="_blank" class="social-btn facebook">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-            </div>  
-           
-   <!--  حط هذا الكود الجديد في البلاصة اللي مسحت منها الكود القديم -->
-<div class="request-box">
-    <h3><i class="fas fa-paper-plane"></i> Ask for a player's face</h3>
-    <div class="request-form-container">
-        <input type="text" id="player-input" placeholder="Write a player's name here..." autocomplete="off">
-        <button id="submit-request-btn">Submit the request</button>
-    </div>
-</div>
-
-
-        </aside>
-
-        <main class="content-area">
-            <div class="content-header">
-                <h2 id="breadcrumb" class="section-title">Latest Premium Faces</h2>
-                <button id="back-to-home" class="home-btn" style="display: none;"><i class="fas fa-home"></i> Back to Feed</button>
-            </div>
-            
-            <section id="top-box" class="top-box" style="display:none"></section>
-            <div id="display-grid" class="faces-grid">
-                </div>
-
-            <div id="player-modal" class="modal" style="display: none;">
+<main class="wrap content-area" id="faces">
+  <div class="content-header">
+    <h2 id="breadcrumb" class="section-title">Latest Premium Faces</h2>
+    <button id="back-to-home" class="home-btn" style="display: none;"><i class="fas fa-home"></i> Back to Feed</button>
+  </div>
+  <section id="top-box" class="top-box" style="display:none"></section>
+  <div id="display-grid" class="faces-grid"></div>
+  <div id="player-modal" class="modal" style="display: none;">
                 <div class="modal-content">
                     <span class="close-modal" id="close-modal-btn">&times;</span>
                     <div class="modal-body">
@@ -108,18 +82,26 @@
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
+</main>
 
-    <footer class="main-footer">
-        <p>&copy; 2026 <strong>DZfacemaker</strong>. All Rights Reserved. Designed for PES 17 Community.</p>
-    </footer>
+<section class="wrap"><div class="request-box">
+  <div><h3>Can't find a player?</h3><p>Tell me his name and I'll make his face.</p></div>
+  <div class="request-form-container">
+    <input type="text" id="player-input" placeholder="Player name..." autocomplete="off" maxlength="60">
+    <button id="submit-request-btn">Request face</button>
+  </div>
+</div></section>
 
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-    <script src="firebase-config.js"></script>
-    <script src="script.js"></script>
-    <script src="social.js"></script>
+<footer class="main-footer"><div class="wrap">
+  <p>&copy; 2026 <strong>DZfacemaker</strong> · Made for the PES 17 community.</p>
+  <p class="foot-links"><a href="https://www.youtube.com/@DZfacemaker" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com/61577257435908/" target="_blank" rel="noopener">Facebook</a></p>
+</div></footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+<script src="social.js"></script>
 </body>
 </html>

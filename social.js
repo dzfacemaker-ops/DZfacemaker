@@ -1,8 +1,18 @@
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-let me = null, curPlayer = null, offs = [], lastPost = 0;
-firebase.auth().signInAnonymously().catch(() => {});
-firebase.auth().onAuthStateChanged(u => { me = u; if (curPlayer) renderSocial(curPlayer); });
+// إحصائيات الهيرو (تحسب تلقائياً من database)
+(function () {
+  const L = Object.keys(database); let c = 0, f = 0;
+  L.forEach(l => { const k = Object.keys(database[l]); c += k.length; k.forEach(x => f += (database[l][x] || []).length); });
+  const s = (i, v) => { const e = document.getElementById(i); if (e) e.textContent = v; };
+  s('st-faces', f); s('st-clubs', c); s('st-leagues', L.length);
+})();
+
+let db = null, me = null, curPlayer = null, offs = [], lastPost = 0;
+try {
+  firebase.initializeApp(firebaseConfig);
+  db = firebase.database();
+  firebase.auth().onAuthStateChanged(u => { me = u; if (curPlayer) renderSocial(curPlayer); });
+  firebase.auth().signInAnonymously().catch(e => console.error('AUTH ERROR:', e.code, e.message));
+} catch (e) { console.error('FIREBASE INIT ERROR:', e); db = null; }
 
 const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
@@ -16,6 +26,7 @@ function renderSocial(p) {
   let box = document.getElementById('social-box');
   if (!box) { box = el('div'); box.id = 'social-box'; document.querySelector('.modal-info').appendChild(box); }
   box.innerHTML = '';
+  if (!db) { box.appendChild(el('p', 'cm-empty', 'Likes & comments are not available here. Open the live website.')); return; }
   const id = slug(p.name);
 
   // الإعجاب
@@ -26,7 +37,7 @@ function renderSocial(p) {
     const liked = me && s.hasChild(me.uid);
     likeBtn.textContent = (liked ? '♥ ' : '♡ ') + s.numChildren();
     likeBtn.classList.toggle('liked', !!liked);
-    likeBtn.onclick = () => { if (!me) return; liked ? lr.child(me.uid).remove() : lr.child(me.uid).set(true); };
+    likeBtn.onclick = () => { if (!me) { alert('Login error. Please refresh the page (Ctrl+Shift+R).'); return; } liked ? lr.child(me.uid).remove() : lr.child(me.uid).set(true); };
   });
   offs.push(() => lr.off('value', lh));
 
@@ -61,9 +72,10 @@ function renderSocial(p) {
 document.getElementById('submit-request-btn').addEventListener('click', () => {
   const i = document.getElementById('player-input'), v = i.value.trim();
   if (!v || v.length > 60) { alert("Please write a player's name (max 60 characters)."); return; }
+  if (!db) { alert('Not available here. Please use the live website.'); return; }
   db.ref('requests').push({ name: v, date: new Date().toISOString().slice(0, 10) })
     .then(() => { alert('Your request has been sent successfully! 🚀'); i.value = ''; })
-    .catch(() => alert('Error sending request.'));
+    .catch(e => alert('Error sending request: ' + (e.code || e.message)));
 });
 
 
@@ -80,6 +92,7 @@ let dlOff = null;
 const _open2 = openPlayerModal;
 openPlayerModal = function (p, c) {
   _open2(p, c);
+  if (!db) return;
   if (dlOff) { dlOff(); dlOff = null; }
   const a = document.getElementById('download-link');
   let tag = document.getElementById('dl-count');
@@ -116,7 +129,7 @@ function renderTop() {
   });
   topBox.appendChild(g);
 }
-db.ref('likes').on('value', s => { likeData = s.val() || {}; renderTop(); }, () => {});
+if (db) db.ref('likes').on('value', s => { likeData = s.val() || {}; renderTop(); }, () => {});
 new MutationObserver(renderTop).observe(backBtn, { attributes: true, attributeFilter: ['style'] });
 
 // 3) شارة NEW (من حقل added: "2026-10-03" أو من تاريخ اسم الصورة)
