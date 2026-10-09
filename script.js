@@ -214,7 +214,11 @@ const database = {
            "Deportivo Reistra": [ 
             { name: "Ighacio Arce", img: "Images2/Screenshot 2026-09-21 143024.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Y4qm0fN " },         
             
-            ],        
+            ],  
+            "CA San Lorenzo": [ 
+            { name: "Alexis Cuello", img: "Images2/Screenshot 2026-10-07 174221.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/U8258J ", added: "2026-10-09" },         
+            
+            ],       
            
 
         },
