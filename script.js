@@ -280,7 +280,8 @@ const database = {
             { name: "Diego Tristàn", img: "Images2/Screenshot 2026-09-04 125642.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/B72svU " }, 
             { name: "Walter Pandiani", img: "Images2/Screenshot 2026-09-08 131545.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/c1Kypi " },    
             { name: "Francisco Javier", img: "Images2/Screenshot 2026-09-18 125816.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qY3eM9 " },    
-            { name: "Dani Guiza", img: "Images2/Screenshot 2026-09-26 153703.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bSiVeX4 " },    
+            { name: "Dani Guiza", img: "Images2/Screenshot 2026-09-26 153703.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bSiVeX4 " },
+            { name: "John Terry V3", img: "Images2/Screenshot 2026-09-03 14957.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/DvguQk2 ", added: "2026-10-09" },    
            
         ],  
         "Other clubs": [
