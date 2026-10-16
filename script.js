@@ -282,7 +282,7 @@ const database = {
             { name: "Francisco Javier", img: "Images2/Screenshot 2026-09-18 125816.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/qY3eM9 " },    
             { name: "Dani Guiza", img: "Images2/Screenshot 2026-09-26 153703.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/bSiVeX4 " },
             { name: "John Terry V3", img: "Images2/Screenshot 2026-09-03 14957.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/DvguQk2 ", added: "2026-10-09" },    
-           
+            { name: "Jose Amavisca", img: "Images2/Screenshot 2026-10-14 151302.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/R47DY5 ", added: "2026-10-16" }, 
         ],  
         "Other clubs": [
             { name: "Adil Boulbina", img: "Images/Screenshot 2026-04-14 015340.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: "https://ouo.io/aPemCo " },
@@ -303,7 +303,8 @@ const database = {
             { name: "Junior Bueno", img: "Images/Screenshot 2026-08-29 130557.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3vx4Ka " }, 
             { name: "Tigran Avanesyan", img: "Images/Screenshot 2026-09-01 124723.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dcyD0oR " },     
             { name: "Nabil Fekir", img: "Images2/Screenshot 2026-09-15 123550.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/n99DwRL " },     
-            { name: "Artak Dashyan", img: "Images2/Screenshot 2026-09-18 145351.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8t58J6 " },     
+            { name: "Artak Dashyan", img: "Images2/Screenshot 2026-09-18 145351.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8t58J6 " }, 
+            { name: "Artur Gharibyan", img: "Images2/Screenshot 2026-10-16 162143.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/KKmExs ", added: "2026-10-16" },        
         
         
         ]
