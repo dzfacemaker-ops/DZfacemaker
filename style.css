@@ -115,3 +115,11 @@ h1,h2,h3{font-family:Outfit,Inter,sans-serif}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero{padding:44px 0 36px}.modal-body{grid-template-columns:1fr}.modal-img-container img{max-height:380px}}
 @media(max-width:600px){.league-bar ul{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}.wrap{padding:0 16px}.header-container{gap:10px}.logo h1{font-size:1.25rem}.head-social{display:none}.faces-grid{grid-template-columns:repeat(2,1fr);gap:12px}.card-details{padding:11px}.card-details h3{font-size:.92rem}.card-btn{width:32px;height:32px}.stats b{font-size:1.7rem}.request-box{padding:24px 20px}.section-title{font-size:1.3rem}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== game switcher PES 17 / PES 21 ===== */
+.game-tabs{display:inline-flex;margin-top:14px;background:var(--s1);border:1px solid var(--line);border-radius:999px;padding:4px}
+.game-tabs button{border:0;background:transparent;color:var(--mut);font:700 .95rem Outfit,Inter,sans-serif;padding:8px 22px;border-radius:999px;cursor:pointer;transition:.2s}
+.game-tabs button:hover{color:var(--ink)}
+.game-tabs button.on{background:var(--gold);color:#121004}
+
+.game-badge{position:absolute;top:12px;right:12px;z-index:3;background:#000b;border:1px solid #ffffff40;color:#fff;font-weight:700;font-size:.68rem;letter-spacing:.8px;padding:3px 10px;border-radius:999px}

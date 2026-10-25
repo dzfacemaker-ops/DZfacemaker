@@ -218,6 +218,11 @@ const database = {
             "CA San Lorenzo": [ 
             { name: "Alexis Cuello", img: "Images2/Screenshot 2026-10-07 174221.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/U8258J ", added: "2026-10-09" },         
             
+            ],  
+             "Estudiantes LP": [ 
+            { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-22 162753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Ucb5tO ", game: "17", added: "2026-10-25" },     
+            { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-23 114241.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/yfyjCTe ", game: "21", added: "2026-10-25" },       
+            
             ],       
            
 
@@ -304,7 +309,9 @@ const database = {
             { name: "Tigran Avanesyan", img: "Images/Screenshot 2026-09-01 124723.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dcyD0oR " },     
             { name: "Nabil Fekir", img: "Images2/Screenshot 2026-09-15 123550.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/n99DwRL " },     
             { name: "Artak Dashyan", img: "Images2/Screenshot 2026-09-18 145351.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8t58J6 " }, 
-            { name: "Artur Gharibyan", img: "Images2/Screenshot 2026-10-16 162143.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/KKmExs ", added: "2026-10-16" },        
+            { name: "Artur Gharibyan", img: "Images2/Screenshot 2026-10-16 162143.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/KKmExs ", added: "2026-10-16" },      
+            { name: "Cavan Sullivan", img: "Images2/Screenshot 2026-10-24 175639.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/H3xBjWG ", added: "2026-10-25" },     
+            { name: "Cavan Sullivan", img: "Images2/Screenshot 2026-10-24 145224.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/tkCJC4 ", game: "21", added: "2026-10-25" },       
         
         
         ]

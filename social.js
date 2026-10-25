@@ -1,10 +1,11 @@
 // إحصائيات الهيرو (تحسب تلقائياً من database)
-(function () {
+function updateStats() {
   const L = Object.keys(database); let c = 0, f = 0;
   L.forEach(l => { const k = Object.keys(database[l]); c += k.length; k.forEach(x => f += (database[l][x] || []).length); });
   const s = (i, v) => { const e = document.getElementById(i); if (e) e.textContent = v; };
   s('st-faces', f); s('st-clubs', c); s('st-leagues', L.length);
-})();
+}
+updateStats();
 
 let db = null, me = null, curPlayer = null, offs = [], lastPost = 0;
 try {
@@ -15,6 +16,7 @@ try {
 } catch (e) { console.error('FIREBASE INIT ERROR:', e); db = null; }
 
 const slug = n => n.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const faceId = p => (String(p.game) === '21' ? 'p21-' : '') + slug(p.name);
 const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt) e.textContent = txt; return e; };
 
 const _open = openPlayerModal;
@@ -27,7 +29,7 @@ function renderSocial(p) {
   if (!box) { box = el('div'); box.id = 'social-box'; document.querySelector('.modal-info').appendChild(box); }
   box.innerHTML = '';
   if (!db) { box.appendChild(el('p', 'cm-empty', 'Likes & comments are not available here. Open the live website.')); return; }
-  const id = slug(p.name);
+  const id = faceId(p);
 
   // الإعجاب
   const likeBtn = el('button', 'like-btn', '♡ 0');
@@ -83,9 +85,13 @@ document.getElementById('submit-request-btn').addEventListener('click', () => {
 const NEW_DAYS = 14; // الوجه يعتبر "جديد" لهذي المدة (بالأيام)
 
 // فهرس اللاعبين من database تاع script.js (بدون لمسه)
-const idx = {}, byName = {};
-Object.keys(database).forEach(lg => Object.keys(database[lg]).forEach(club =>
-  (database[lg][club] || []).forEach(p => { const o = { p, club }; idx[slug(p.name)] = o; byName[p.name] = o; })));
+const idx = {}, byName = {}, byKey = {};
+function rebuildIdx() {
+  Object.keys(idx).forEach(k => delete idx[k]); Object.keys(byName).forEach(k => delete byName[k]); Object.keys(byKey).forEach(k => delete byKey[k]);
+  Object.keys(database).forEach(lg => Object.keys(database[lg]).forEach(club =>
+    (database[lg][club] || []).forEach(p => { const o = { p, club }; idx[faceId(p)] = o; byName[p.name] = o; byKey[p.name + '|' + p.img] = o; })));
+}
+rebuildIdx();
 
 // 1) عدّاد التحميلات
 let dlOff = null;
@@ -98,7 +104,7 @@ openPlayerModal = function (p, c) {
   let tag = document.getElementById('dl-count');
   if (!tag) { tag = el('span', 'dl-count'); tag.id = 'dl-count'; a.after(tag); }
   tag.textContent = '';
-  const r = db.ref('downloads/' + slug(p.name));
+  const r = db.ref('downloads/' + faceId(p));
   const h = r.on('value', s => { tag.textContent = '⬇ ' + (s.val() || 0) + ' downloads'; }, () => {});
   dlOff = () => r.off('value', h);
   a.onclick = () => { if (me) r.transaction(n => (n || 0) + 1); };
@@ -139,11 +145,16 @@ function addedDate(p) {
 }
 function badges() {
   document.querySelectorAll('#display-grid .face-card').forEach(card => {
-    if (card.querySelector('.new-badge')) return;
-    const h = card.querySelector('h3'), o = h && byName[h.textContent];
-    const d = o && addedDate(o.p);
-    if (d && (Date.now() - d) / 864e5 <= NEW_DAYS) card.querySelector('.card-img-holder').appendChild(el('span', 'new-badge', 'NEW'));
+    const h = card.querySelector('h3'), im = card.querySelector('img');
+    const o = h && (byKey[h.textContent + '|' + (im ? im.getAttribute('src') : '')] || byName[h.textContent]);
+    const holder = card.querySelector('.card-img-holder');
+    if (!o || !holder) return;
+    if (window.currentGame === 'all' && !holder.querySelector('.game-badge')) holder.appendChild(el('span', 'game-badge', 'PES ' + o.p.game));
+    const d = addedDate(o.p);
+    if (!holder.querySelector('.new-badge') && d && (Date.now() - d) / 864e5 <= NEW_DAYS) holder.appendChild(el('span', 'new-badge', 'NEW'));
   });
 }
 new MutationObserver(badges).observe(document.getElementById('display-grid'), { childList: true });
 badges();
+
+window.onGameChange = () => { rebuildIdx(); updateStats(); renderTop(); };

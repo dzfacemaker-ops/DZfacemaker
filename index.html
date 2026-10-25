@@ -17,10 +17,10 @@
     <meta property="og:url" content="https://dzfacemaker-ops.github.io/DZfacemaker/">
     <meta property="og:title" content="DZfacemaker | Premium PES 17 Faces Database">
     <meta property="og:description" content="Download high-quality professional face packs for PES 2017. All major leagues included!">
-    <meta property="og:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/images/preview.png">
+    <meta property="og:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/Images/preview.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DZfacemaker | Premium PES 17 Faces Database">
-    <meta name="twitter:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/images/preview.png">
+    <meta name="twitter:image" content="https://dzfacemaker-ops.github.io/DZfacemaker/Images/preview.png">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"DZfacemaker","url":"https://dzfacemaker-ops.github.io/DZfacemaker/","description":"PES 2017 face packs for all major leagues"}</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,8 +41,8 @@
 
 <section class="hero" id="top"><div class="wrap hero-grid">
   <div>
-    <span class="eyebrow">PES 2017 · Face Packs</span>
-    <h2>The most realistic <em>faces</em> for your PES&nbsp;17.</h2>
+    <span class="eyebrow" id="game-eyebrow">PES 2017 · Face Packs</span>
+    <h2>The most realistic <em>faces</em> for your <span id="game-name">PES&nbsp;17</span>.</h2>
     <p>Hand-made, high-quality face packs for the biggest leagues. Find your player, download, play.</p>
     <a class="cta" href="#faces">Browse faces <i class="fas fa-arrow-down"></i></a>
   </div>
@@ -53,7 +53,8 @@
   </div>
 </div></section>
 
-<nav class="league-bar" aria-label="Leagues"><div class="wrap"><ul id="leagues-list"></ul></div></nav>
+<nav class="league-bar" aria-label="Leagues"><div class="wrap">
+  <div class="game-tabs" role="group" aria-label="Game"><button type="button" data-g="all" class="on" aria-pressed="true">All</button><button type="button" data-g="17" aria-pressed="false">PES 17</button><button type="button" data-g="21" aria-pressed="false">PES 21</button></div><ul id="leagues-list"></ul></div></nav>
 
 <main class="wrap content-area" id="faces">
   <div class="content-header">
@@ -103,5 +104,6 @@
 <script src="firebase-config.js"></script>
 <script src="script.js"></script>
 <script src="social.js"></script>
+<script src="games.js"></script>
 </body>
 </html>
