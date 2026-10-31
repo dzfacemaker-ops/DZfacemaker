@@ -104,6 +104,10 @@ const database = {
             { name: "Leonardo Balerdi", img: "Images/Screenshot 2026-09-02 125845.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/k0L96T " },
 
         ],
+         "Como 1907": [
+            { name: "Martin Baturina", img: "Images2/Screenshot 2026-10-30 123609.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/3gUzGf ", added: "2026-10-31" },     
+            { name: "Martin Baturina", img: "Images2/Screenshot 2026-10-30 120838.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/VMt6N3t ", game: "21", added: "2026-10-31" },       
+        ],
     },
 
     "Serie B": { "Sampdoria": [], "Bari": [], 
