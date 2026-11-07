@@ -244,6 +244,11 @@ const database = {
             { name: "Cristian Medina", img: "Images2/Screenshot 2026-09-08 144853.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8KtjG8 " },
 
         ],
+        "SE Palmeiras": [
+            { name: "Flaco Lopez", img: "Images2/Screenshot 2026-11-06 142508.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/tOAkleZ ", added: "2026-11-07" },     
+            { name: "Flaco Lopez", img: "Images2/Screenshot 2026-11-06 134732.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/NcHykbn ", game: "21", added: "2026-11-07" }, 
+
+        ],
         
         },
     "ORA League": { 
