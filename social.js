@@ -125,7 +125,7 @@ function renderTop() {
   const g = el('div', 'top-grid');
   rows.forEach(x => {
     const { p, club } = idx[x.k];
-    const c = el('div', 'face-card top-card');
+    const c = el('div', 'face-card top-card g' + p.game);
     const h = el('div', 'card-img-holder'); const im = el('img'); im.src = p.img; im.alt = p.name; h.appendChild(im);
     const d = el('div', 'card-details'); const w = el('div');
     w.append(el('h3', '', p.name), el('p', 'card-club', '♥ ' + x.n + ' · ' + club));
@@ -149,6 +149,7 @@ function badges() {
     const o = h && (byKey[h.textContent + '|' + (im ? im.getAttribute('src') : '')] || byName[h.textContent]);
     const holder = card.querySelector('.card-img-holder');
     if (!o || !holder) return;
+    card.classList.add('g' + o.p.game);
     if (window.currentGame === 'all' && !holder.querySelector('.game-badge')) holder.appendChild(el('span', 'game-badge', 'PES ' + o.p.game));
     const d = addedDate(o.p);
     if (!holder.querySelector('.new-badge') && d && (Date.now() - d) / 864e5 <= NEW_DAYS) holder.appendChild(el('span', 'new-badge', 'NEW'));

@@ -185,7 +185,7 @@ const database = {
 
         ], "ES Setif": [], "CS Constantine": []
     },
-    "Argentina Ligue 1": {
+    "LPF Argentina": {
          "Boca Juniors": [
              { name: "Leonel Flores", img: "Images/Screenshot 2026-08-22 131734.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/QRnWZ7 " }, 
              { name: "Dylan Gorosito", img: "Images/Screenshot 2026-08-25 162345.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/8wja5G " },  
@@ -223,11 +223,16 @@ const database = {
             { name: "Alexis Cuello", img: "Images2/Screenshot 2026-10-07 174221.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/U8258J ", added: "2026-10-09" },         
             
             ],  
-             "Estudiantes LP": [ 
+            "Estudiantes LP": [ 
             { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-22 162753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Ucb5tO ", game: "17", added: "2026-10-25" },     
             { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-23 114241.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/yfyjCTe ", game: "21", added: "2026-10-25" },       
             
-            ],       
+            ],   
+            "Atlético Tucumán": [ 
+            { name: "Nicolas Lamendola", img: "Images2/Screenshot 2026-11-13 111225.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/dzcu3VE ", game: "17", added: "2026-11-13" },     
+            { name: "Nicolas Lamendola", img: "Images2/Screenshot 2026-11-13 104422.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/muutjt ", game: "21", added: "2026-11-13" },       
+            
+            ],     
            
 
         },

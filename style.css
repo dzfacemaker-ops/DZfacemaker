@@ -123,3 +123,73 @@ h1,h2,h3{font-family:Outfit,Inter,sans-serif}
 .game-tabs button.on{background:var(--gold);color:#121004}
 
 .game-badge{position:absolute;top:12px;right:12px;z-index:3;background:#000b;border:1px solid #ffffff40;color:#fff;font-weight:700;font-size:.68rem;letter-spacing:.8px;padding:3px 10px;border-radius:999px}
+
+
+/* ===== theme v3: stadium night (A) + collector cards (C) ===== */
+:root{--bg:#0b0f0d;--s1:#111a16;--s2:#16211b;--line:#1f2b25;--mut:#8da097;--gold:#2ee88a;--green:#2ee88a}
+body{background:#0b0f0d}
+.hero{background:none;padding:26px 0 18px}
+.hero-grid{width:calc(100% - 48px);max-width:1232px;margin:0 auto;padding:46px 44px;background:#0f3a28;border:1px solid #1d5a3f;border-radius:24px}
+.hero h2 em{background:none;-webkit-text-fill-color:currentColor;color:var(--green)}
+.hero p{color:#b9d3c4}
+.stats div{background:#0b0f0d99;border-color:#1d5a3f}
+.cta,.request-form-container button,.download-action-btn,.cm-send{color:#04170d}
+.cta:hover,.download-action-btn:hover{box-shadow:0 10px 30px #2ee88a40}
+.face-card{display:block;background:#111a16;border:2px solid #4a5d53;border-radius:16px;padding:6px;overflow:visible}
+.face-card.g17{border-color:#8da097}
+.face-card.g21{border-color:#2ee88a;background:#0f241a}
+.face-card:hover{border-color:#2ee88a;box-shadow:0 18px 36px #000a}
+.card-img-holder{border-radius:10px;overflow:hidden}
+.card-img-holder::after{display:none}
+.card-details{display:block;text-align:center;padding:10px 4px 4px}
+.card-club{margin-top:2px}
+.card-btn{display:block;width:100%;height:auto;margin-top:10px;padding:8px;border-radius:10px;font:600 .85rem Inter,sans-serif;background:#16211b;color:#eef3ee;border:0.5px solid #2a3a32}
+.card-btn::before{content:none}
+.face-card:hover .card-btn{transform:none;background:#2ee88a;color:#04170d;border-color:#2ee88a}
+.game-badge{left:12px;right:auto;border:0;border-radius:6px;background:#8da097;color:#0b0f0d}
+.g21 .game-badge{background:#2ee88a;color:#04170d}
+.new-badge{left:auto;right:12px;background:#ffffff;color:#0b0f0d;border-radius:6px}
+.top-card .card-details{padding:8px 4px 2px}
+.top-card .card-btn{display:none}
+@media(max-width:600px){.hero-grid{width:calc(100% - 32px);padding:28px 20px}}
+@media(max-width:600px){.main-header{height:auto}.header-container{flex-wrap:wrap;padding-top:10px;padding-bottom:10px}.search-wrapper{flex:1 0 100%;max-width:none;order:3}}
+
+/* ===== FX: حياة وحركة ===== */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:#2ee88a;z-index:2000;box-shadow:0 0 12px #2ee88a}
+.ticker{overflow:hidden;background:#0f241a;border-bottom:1px solid #1d5a3f;white-space:nowrap}
+.ticker-in{display:inline-flex;gap:34px;padding:9px 0;animation:tk 60s linear infinite}
+.ticker:hover .ticker-in{animation-play-state:paused}
+.tk{cursor:pointer;font-size:.85rem;color:#b9d3c4}
+.tk b{color:#04170d;background:#2ee88a;border-radius:5px;padding:1px 7px;margin-inline-end:6px;font-size:.72rem}
+.tk:hover{color:#fff}
+@keyframes tk{to{transform:translateX(-50%)}}
+.hero-grid{position:relative;overflow:hidden}
+.hero-grid>*:not(.fx-canvas){position:relative;z-index:1}
+.fx-canvas{position:absolute!important;inset:0;width:100%;height:100%;z-index:0!important;pointer-events:none}
+.hero-grid .stats{margin-top:30px;max-width:460px}
+.cta.ghost{background:transparent;color:#2ee88a;border:1.5px solid #2ee88a;margin-inline-start:10px;cursor:pointer;font-family:inherit;font-size:1rem}
+.cta.ghost:hover{background:#2ee88a22;box-shadow:none}
+.showcase{height:440px;perspective:1100px;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d}
+.showcase::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:#2ee88a;filter:blur(90px);opacity:.22;z-index:-1}
+.sc-card{position:absolute;width:250px;background:#0f241a;border:2px solid #8da097;border-radius:18px;padding:6px;cursor:pointer;transition:transform .8s cubic-bezier(.2,.8,.2,1),opacity .8s,filter .8s;box-shadow:0 24px 50px #0009}
+.sc-card.g21{border-color:#2ee88a}
+.sc-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:12px;background:#0a1210}
+.sc-cap{text-align:center;padding:9px 4px 5px}.sc-cap b{display:block}.sc-cap span{font-size:.82rem;color:#8da097}
+.sc-card[data-d="0"]{transform:translateZ(70px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));z-index:3;box-shadow:0 30px 70px #000c,0 0 40px #2ee88a33}
+.sc-card[data-d="-1"]{transform:translateX(-64%) translateZ(-90px) rotateY(30deg) scale(.86);opacity:.5;filter:brightness(.55);z-index:2}
+.sc-card[data-d="1"]{transform:translateX(64%) translateZ(-90px) rotateY(-30deg) scale(.86);opacity:.5;filter:brightness(.55);z-index:2}
+.sc-card[data-d="x"]{opacity:0;pointer-events:none;transform:translateZ(-240px) scale(.6)}
+.fx .face-card:not(.top-card){opacity:0;transform:translateY(26px) scale(.97);animation:none;transition:opacity .55s ease,transform .35s ease-out,border-color .25s,box-shadow .25s}
+.fx .face-card.in{opacity:1;transform:none}
+.fx .face-card.in:hover{transform:translateY(-6px)}
+.fx .top-card{opacity:1;transform:none;animation:none}
+.face-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:4;opacity:0;transition:opacity .25s;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),#2ee88a2e,transparent 62%)}
+.face-card:hover::before{opacity:1}
+.sdrop{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;background:#111a16;border:1px solid #1f2b25;border-radius:16px;padding:6px;box-shadow:0 20px 50px #000c;z-index:80}
+.sd-row{display:flex;align-items:center;gap:12px;padding:8px 10px;border-radius:12px;cursor:pointer}
+.sd-row:hover{background:#16211b}
+.sd-row img{width:42px;height:42px;border-radius:10px;object-fit:cover;object-position:top;background:#0a1210}
+.sd-row b{display:block;font-size:.92rem}.sd-row span{font-size:.78rem;color:#8da097}
+@media(max-width:860px){.showcase{height:400px;margin-top:10px}.sc-card{width:210px}}
+@media(prefers-reduced-motion:reduce){.fx .face-card:not(.top-card){opacity:1;transform:none}.ticker-in{animation:none}}
+@media(max-width:600px){.cta.ghost{margin-inline-start:0;margin-top:10px}}
