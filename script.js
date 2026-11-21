@@ -172,6 +172,12 @@ const database = {
 
         ], 
         },
+    "3F Superliga": { 
+        "FC Kobenhavn": [
+            { name: "Viktor Dadason", img: "Images2/Screenshot 2026-11-20 173101.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/svsfP9 ", game: "17", added: "2026-11-20" },     
+            { name: "Viktor Dadason", img: "Images2/Screenshot 2026-11-20 171956.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/3kxAh6 ", game: "21", added: "2026-11-20" },       
+        ], 
+        },
     "Algerian Ligue 1": {
         "MC Alger": [
             { name: "Youcef Belaili", img: "Images/Screenshot 2026-04-14 225327.png", details: "Exclusive Face Pack for Algerian Ligue 1 project in PES 17.", link: " https://ouo.io/52BCsW " },
