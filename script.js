@@ -232,6 +232,8 @@ const database = {
             "Estudiantes LP": [ 
             { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-22 162753.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/Ucb5tO ", game: "17", added: "2026-10-25" },     
             { name: "Gaston Benedetti", img: "Images2/Screenshot 2026-10-23 114241.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/yfyjCTe ", game: "21", added: "2026-10-25" },       
+            { name: "Edwuin Cetre", img: "Images2/Screenshot 2026-11-26 194201.png", details: "Premium high quality ultra-textured face pack for PES 17.", link: " https://ouo.io/6xEb2d ", game: "17", added: "2026-11-27" },     
+            { name: "Edwuin Cetre", img: "Images2/Screenshot 2026-11-26 190440.png", details: "Premium high quality ultra-textured face pack for PES 21.", link: " https://ouo.io/0SdmW7 ", game: "21", added: "2026-11-27" },       
             
             ],   
             "Atlético Tucumán": [ 
